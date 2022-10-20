@@ -1,17 +1,20 @@
-﻿// Задача 6
-/*Если остаток числа N после деления на 2 равен 0,
- то число четное, иначе не четное
-*/
+﻿//10 for 99 
 
+int number = new Random().Next(10,100); //запомнить 
+int a1 = number / 10;
+int a2 = number % 10;
 
-Console.WriteLine("Введите число: ");
-
-int a = Convert.ToInt32(Console.ReadLine());
-
-for (int i = 1; i <= a; i++)
+if (a1 > a2) 
 {
-    if ((i % 2) == 0)
-    {
-        Console.Write(i + " ");
-    }
+   Console.WriteLine($"наибольшая цифра : {a1}"); 
 }
+if (a2 < a1)
+{
+   Console.WriteLine($"наименьшая цифра : {a2}"); 
+}
+if (a1 ==a2)
+{
+   Console.WriteLine("равны :"); 
+}
+Console.WriteLine(number);
+Console.ReadKey(); 
