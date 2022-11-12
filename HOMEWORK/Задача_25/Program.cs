@@ -8,16 +8,16 @@ int Anum = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите число Б: ");
 int Bnum = Convert.ToInt32(Console.ReadLine());
 
-Console.WriteLine($"Результат возведения числа {Anum} в степень {Bnum} равен: {GetSF(Bnum)}");
+Console.WriteLine($"Результат возведения числа {Anum} в степень {Bnum} равен: {GetSF(Bnum, Anum)}");
 
-int GetSF(int Bnum)
+int GetSF(int Bnum, int Anum)
 {
-int temp=Anum;
+    int temp=Anum;
 
-for (int x = 1; x < Bnum; x++)
-{
-    temp =  temp * Anum; 
-    Console.WriteLine($"Промежуточный результат: {temp}");
-}
-return temp;
+    for (int x = 1; x < Bnum; x++)
+    {
+        temp =  temp * Anum; 
+        Console.WriteLine($"Промежуточный результат: {temp}");
+    }
+    return temp;
 }
